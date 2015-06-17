@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shortlist_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c2c2c2"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/shortlist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="@string/shortlist_dialog_title"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/separator"
+        android:orientation="horizontal"
+        android:weightSum="300" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="149" >
+
+            <Button
+                android:id="@+id/shortlist_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Cancel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#636363"
+            android:layout_weight="2" >
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="149" >
+
+            <Button
+                android:id="@+id/shortlist_shortlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Shortlist" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shortlist_title"
+        android:layout_marginTop="20dp"
+        android:background="#636363" />
+
+</RelativeLayout>
