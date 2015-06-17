@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/unmatch_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c2c2c2"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/unmatch_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="@string/unmatch_dialog_title"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/unmatch_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/unmatch_title"
+        android:layout_below="@+id/unmatch_title"
+        android:checkedButton="@+id/radio1_incompatibility"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="16dp" >
+
+        <RadioButton
+            android:id="@+id/radio1_incompatibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unmatch_radio1"
+            android:textColor="#636363"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/radio2_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unmatch_radio2"
+            android:textColor="#636363"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/radio3_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unmatch_radio3"
+            android:textColor="#636363"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/separator"
+        android:orientation="horizontal"
+        android:weightSum="300" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="149" >
+
+            <Button
+                android:id="@+id/unmatch_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Cancel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#636363"
+            android:layout_weight="2" >
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="149" >
+
+            <Button
+                android:id="@+id/unmatch_unmatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Unmatch" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/unmatch_radioGroup"
+        android:background="#636363" />
+
+</RelativeLayout>
