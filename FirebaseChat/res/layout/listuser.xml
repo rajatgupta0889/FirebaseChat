@@ -3,15 +3,12 @@
     android:layout_height="fill_parent" >
 
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/list1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/listFooter"
+        android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
-        android:divider="@null"
-        android:dividerHeight="5dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:dividerHeight="2dp"
+        android:padding="50dp"
         android:transcriptMode="alwaysScroll" />
 
 </RelativeLayout>
