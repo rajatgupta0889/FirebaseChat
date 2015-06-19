@@ -3,83 +3,71 @@ package com.chat.app.firebasechat;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Fragment;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class SelectUser extends ActionBarActivity implements OnClickListener {
 
-	Spinner spinner;
-	int[] id;
-	List<String> list;
+	UserListAdapter adapter;
+	List<MessageModel> list;
 	ListView list1;
-	ArrayAdapter<String> dataAdapter;
+	LayoutInflater inflater;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listuser);
-		id = new int[3];
+		list = new ArrayList<MessageModel>();
+		adapter = new UserListAdapter(SelectUser.this, list);
 		list1 = (ListView) findViewById(R.id.list1);
-		list = new ArrayList<String>();
-		dataAdapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, list);
-		id[0] = 1;
-		id[1] = 2;
-		id[2] = 3;
-
-		list.add("mantra");
-		list.add("marrily");
-		list.add("touchkin");
-		dataAdapter.notifyDataSetChanged();
-
-		dataAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		list1.setAdapter(dataAdapter);
+		list.add(new MessageModel("", "02 days remaining", "3 new messages",
+				"Tanya", "", ""));
+		list.add(new MessageModel("", "16 days remaining", "2 new messages",
+				"Priya", "", ""));
+		list.add(new MessageModel("", "30 days remaining", "", "Pooja", "", ""));
+		list.add(new MessageModel("", "21 days remaining", "", "Komal", "", ""));
+		list.add(new MessageModel("", "14 days remaining", "110 new messages",
+				"Jyoti", "", ""));
+		list.add(new MessageModel("", "19 days remaining", "23 new messages",
+				"Sandy", "", ""));
+		list.add(new MessageModel("", "12 days remaining", "1 new messages",
+				"Rachel", "", ""));
+		list.add(new MessageModel("", "01 days remaining", "3 new messages",
+				"Riya", "", ""));
+		list.add(new MessageModel("", "Today is last day", "", "Aarti", "", ""));
+		list.add(new MessageModel("", "09 days remaining", "", "Sophia", "", ""));
+		adapter.notifyDataSetChanged();
+		list1.setAdapter(adapter);
 		list1.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// TODO Auto-generated method stub
-				String yob = parent.getAdapter().getItem(position).toString();
 				Intent intent = new Intent(SelectUser.this, MainActivity.class);
-				intent.putExtra("id", position);
-				intent.putExtra("group", yob);
+				intent.putExtra("group", list.get(position).getUserName());
+				intent.putExtra("days", list.get(position).getRemainingDay());
 				startActivity(intent);
-				Log.d("yob", yob+" "+position);
 			}
 		});
-
-//			@Override
-//			public void onItemSelected(AdapterView<?> parent, View view,
-//					int position, long id) {
-//
-//				String yob = parent.getSelectedItem().toString();
-//				Intent intent = new Intent(SelectUser.this, MainActivity.class);
-//				intent.putExtra("id", position);
-//				intent.putExtra("group", yob);
-//				startActivity(intent);
-//				Log.d("yob", yob+" "+position);
-//			}
-//
-//			@Override
-//			public void onNothingSelected(AdapterView<?> parent) {
-//				// TODO Auto-generated method stub
-//
-//			}
-
 	}
 
 	@Override

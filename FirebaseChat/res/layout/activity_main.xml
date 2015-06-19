@@ -4,12 +4,17 @@
     android:layout_height="fill_parent"
     tools:context=".MainActivity" >
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar" >
+    </include>
+
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/listFooter"
-        android:layout_below="@+id/unmatch"
+        android:layout_below="@+id/tool_bar"
         android:divider="@null"
         android:dividerHeight="5dp"
         android:paddingBottom="10dp"
@@ -41,34 +46,39 @@
             android:src="@android:drawable/ic_menu_send" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/unmatch"
+    <LinearLayout
+        android:id="@+id/menuitem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/button"
-        android:text="Unmatch" />
+        android:layout_below="@+id/tool_bar"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:visibility="invisible" >
 
-    <Button
-        android:id="@+id/shortlist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button"
-        android:text="Shortlist" />
+        <TextView
+            android:id="@+id/shortlist"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Shortlist"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@android:id/list"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/shortlist"
-        android:text="TextView"
-        android:gravity="center"
-        android:textSize="30sp" />
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff" />
+
+        <TextView
+            android:id="@+id/unmatch"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Unmatch"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
 
 </RelativeLayout>

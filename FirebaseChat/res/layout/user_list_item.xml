@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f6f6f6" >
+
+    <ImageView
+        android:id="@+id/userimage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="#000000" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/userimage"
+        android:layout_toRightOf="@+id/userimage"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:text="Tanya" />
+
+    <TextView
+        android:id="@+id/remainingdays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/username"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="15dp"
+        android:textSize="13sp"
+        android:text="02 days remaining" />
+
+    <TextView
+        android:id="@+id/newmessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/username"
+        android:layout_alignBottom="@+id/username"
+        android:layout_alignParentRight="true"
+        android:text="1 new mwssage" />
+
+</RelativeLayout>
