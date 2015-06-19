@@ -5,11 +5,11 @@
 
     <ImageView
         android:id="@+id/receiver"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/receiver" />
+        android:background="#00ff00" />
 
     <TextView
         android:id="@+id/receiver_message"
@@ -18,16 +18,21 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="10dp"
         android:layout_toLeftOf="@+id/receiver"
+        android:background="@drawable/bb"
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
         android:text="TextView"
         android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/sender"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/sender" />
+        android:background="#000000" />
 
     <TextView
         android:id="@+id/sender_message"
@@ -36,9 +41,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/sender"
+        android:background="@drawable/aa"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="3dp"
+        android:paddingTop="5dp"
         android:text="TextView"
         android:textSize="20sp" />
-
-    
 
 </RelativeLayout>

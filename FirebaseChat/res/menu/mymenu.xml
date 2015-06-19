@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.chat.app.firebasechat.MainActivity" >
+
+   
+    <item
+        android:id="@+id/IconMenu1"
+        android:icon="@drawable/clock"
+        android:title=""
+        app:showAsAction="always"/>
+     <item
+        android:id="@+id/IconMenu2"
+        android:icon="@null"
+        android:title="days"
+        app:showAsAction="always"/>
+      <item
+        android:id="@+id/IconMenu3"
+        android:icon="@drawable/menuimg"
+        android:title=""
+        app:showAsAction="always"/>
+
+</menu>
